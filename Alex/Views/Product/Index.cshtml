@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Alex.JoinModels.WithCountryName>
+@{
+    ViewBag.Title = "Lista produselor ";
+}
+<head>
+    <link rel="stylesheet" href="~/css/table.css" />
+</head>
+<h1>Lista produelor disponibile </h1>
+<table class="table-fill">
+    <thead>
+        <tr>
+            <th class="text-left">Denumire</th>
+            <th class="text-left">Show</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+
+                <td>
+                    <a asp-action="Show" asp-controller="product" asp-route-id="@item.Id">Arata</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

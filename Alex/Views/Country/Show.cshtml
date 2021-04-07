@@ -1,0 +1,24 @@
+﻿@model Alex.Models.Country
+@{
+    ViewData["Title"] = "Show";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/show.css" />
+</head>
+
+<div id="show1" >
+    <div id="show2" class="row">
+        @{ <div id="show3" class="col-lg">
+    <h1>  @Model.Name</h1>
+
+    <p>Codul : @Model.Cod</p>
+   <div id="show4">
+    <p class="lead"><a class="btn btn-dark" href="~/country/change/@Model.Id"> Modifica</a></p>
+    <p class="lead"><a class="btn btn-dark" href="~/country/delete/@Model.Id"> Sterge</a></p>
+       </div>
+</div>
+        }
+
+    </div>
+</div>

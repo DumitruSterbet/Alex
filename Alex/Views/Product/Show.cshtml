@@ -1,0 +1,26 @@
+﻿@model Alex.JoinModels.WithCountryName
+@{
+    ViewData["Title"] = "Show";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/show.css" />
+</head>
+
+<div id="show1">
+    <div id="show2" class="row">
+        @{ <div id="show3" class="col-lg">
+    <h1>  @Model.Name</h1>
+
+    <p>Pretul : @Model.Price</p>
+    <p>Cantitaea : @Model.Quantity</p>
+    <p>Tara producator : @Model.Country</p>
+    <div id="show4">
+        <p class="lead"><a class="btn btn-dark" href="~/product/change/@Model.Id"> Modifica</a></p>
+        <p class="lead"><a class="btn btn-dark" href="~/product/delete/@Model.Id"> Sterge</a></p>
+    </div>
+</div>
+        }
+
+    </div>
+</div>
